@@ -1,0 +1,668 @@
+:root{
+    --background: #5aa096;
+    --borders: #2f485e;
+    --mainText: red;
+    --otherText: blue;
+}
+
+html {
+    /*background: rgb(2, 0, 36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 34%, rgba(1,1,150,0.8435749299719888) 69%, rgba(5,133,159,1) 100%); */
+    background-color: var(--borders);
+    scroll-behavior: smooth;
+}
+#SHIPS {
+    background-image: url("../images/smallfinal.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 6975px;
+    margin-top: 0;
+    font-family: 'Russo One', sans-serif;
+}
+#PLANETS{
+    background-image: url("../images/PIA08653_orig.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 6000px;
+    margin-top: 0;
+    font-family: 'Russo One', sans-serif;
+}
+header{
+    align-items: center;
+    min-height: 50vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+header h1 {
+    font-size: 5em;
+    margin: 5px;
+    position: relative;
+    bottom: 1em;
+}
+header > img{
+    transform: scale(0.8);
+}
+header p{
+    width: 80%;
+    background-color: var(--background);
+    padding: 20px;
+    border: 4px solid var(--borders);
+    opacity: 0.75;
+    margin: 0;
+    font-size: 0.8em;
+    position: relative;
+    bottom: 5em;
+    text-align: justify;
+}
+#explore, #smartSelect{
+    background-image: url("../images/211614-24.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 25px;
+    color: lightgray;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.8;
+    transition: background-position 0.2s;
+    position: relative;
+    bottom: 2em;
+}
+header #explore:hover{
+    background-position: bottom;
+}
+#smartSelect:hover{
+    background-position: bottom;
+}
+
+#mid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#mid > h1{
+    border-bottom: solid 2px black;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.engines{
+    display: flex;
+    align-items: center;
+    width: 98%;
+    margin: 7em 0;
+    
+    padding: 20px;
+    color: white;
+    transition: background-color 0.2s;
+    opacity: 0.70;
+}
+
+.engines:hover{
+    background: rgb(47,72,94);
+    background: linear-gradient(90deg, rgba(47,72,94,0.9332107843137255) 36%, rgba(90,160,150,1) 91%);
+    opacity: 0.9;
+    color: white;
+}
+.engines:hover h1{
+    left: 0;
+}
+.engines p{
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.engines ul{
+    opacity: 0;
+    transition: opacity 0.5s;
+    width: 100%;
+    font-size: 1.5em;
+}
+.engines:hover ul{
+    opacity: 0.8;
+}
+.engines:hover p{
+    opacity: 0.8;
+}
+.engines h1{
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 9em;
+    text-align: center;
+    position: relative;
+    left: 25%;
+    transition: left 0.5s;
+}
+#engine1{
+    margin-top: 100px;
+}
+#engine1 h1{
+    background-image: url("../images/hiclipart.com (1).png");
+    
+    background-position: center;
+    background-size: 350px;
+}
+#engine2 h1{
+    background-image: url("../images/clipart11733.png");
+   
+    background-position: bottom;
+    background-size: 380px;
+}
+#engine3 h1{
+    background-image: url("../images/kisspng-apollo-program-apollo-11-saturn-v-apollo-13-v-5ac7cbd153b7a4.4734835915230432813429.png");
+  
+    background-size: 380px;
+    background-position: center;
+}
+#engine4 h1{
+    background-image: url("../images/falcon-9-spacex-falcon-9-png-414_5414.png");
+    background-position: center;
+    background-size: 410px;
+}
+#engine5 h1{
+    background-image: url("../images/SpaceX_Starship_600_0009-removebg-preview.png");
+    background-position: bottom;
+    background-size: 250px;
+    height: 10em;
+}
+#engine6 h1{
+    background-image: url(../images/generationship.png);  
+    background-position: bottom;
+    background-size: 380px;
+    height: 10em;
+}
+#engine7 h1{
+    background-image: url("../images/hiclipart.com.png");
+    background-position: bottom;
+    background-size: 350px;
+}
+#engine8 h1{
+    background-image: url("../images/klaes-fig1-removebg-preview.png");
+    background-position: top;
+    background-size: 550px;
+    height: 10em;
+    
+}
+#engine9 h1{
+    background-image: url("../images/image_gallery-removebg-preview.png");
+    background-position: center;
+    background-size: 280px;
+}
+#engine10 h1{
+    background-image: url("../images/oie_oie_trim_image.png");
+    background-position: bottom;
+    background-size: 300px;
+    height: 10em;
+}
+#engine11 h1{
+    background-image: url("../images/n6LzftRUbAhUMCSWmi2Sji-removebg-preview.png");
+    background-position: bottom;
+    background-size: 300px;
+    height: 10em;
+}
+.btn{
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    font-family: 'Russo One', sans-serif;
+    color: white;
+    font-size: 1.5em;
+}
+.btn:hover{
+    color: var(--borders);
+    
+}
+.Pbtn{
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    font-family: 'Russo One', sans-serif;
+    color: white;
+    font-size: 1.5em;
+}
+.Pbtn:hover{
+    color: var(--borders);
+    
+}
+#Q{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    margin-top: 10em;
+    background-color: var(--borders);
+    padding: 30px 50px 50px 50px;
+    opacity: 0.8;
+    border-radius: 15px;
+    font-size: 1.5em;
+    color: white;
+}
+#Q h1{
+    grid-column: 1/3;
+    margin-top: 0;
+}
+#booking{
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    font-family: 'Russo One', sans-serif;
+    position: relative;
+    bottom: 37px;
+    font-size: 1.5em;
+    color: white;
+}
+#anchor{
+    padding-bottom: 20px;
+}
+.BTT a{
+    text-decoration: none;
+    font-size: 1em;
+    color: lightgray;
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+}
+.BTT a:hover{
+    font-size: 1.2em;
+}
+.GridBase{
+    width: 70%;
+    background-color: var(--borders);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    padding: 10px;
+}
+.matches {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid black;
+}
+.choiceBTN{
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    font-family: 'Russo One', sans-serif;
+    color: white;
+    font-size: 1.2em;
+}
+
+
+
+
+
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.tech{
+    padding: 3em;
+    margin: 5em;
+}
+.btns{
+    background-image: url("../images/iconfinder_galaxy_3285297.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    padding: 5em;
+    width: 270px;
+    cursor: pointer;
+    color: transparent;
+    transition: background-position 0.3s;
+    font-family: 'Russo One', sans-serif;
+    font-size: 1em;
+}
+.btns:hover{
+    background-position: left;
+    color: #e5603c;
+    text-align: end;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: black;
+    box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--borders);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.planets{
+    display: flex;
+    align-items: center;
+    width: 98%;
+    margin: 7em 0;
+    color: white;
+    padding: 20px;
+    
+    transition: background-color 0.2s;
+    opacity: 0.8;
+}
+
+.planets:hover{
+    background: rgb(47,72,94);
+    background: linear-gradient(90deg, rgba(47,72,94,0.9332107843137255) 36%, rgba(90,160,150,1) 91%);
+    opacity: 0.9;
+
+}
+.planets:hover h1{
+    left: 0;
+}
+.planets ul{
+    opacity: 0;
+    transition: opacity 0.5s;
+    width: 100%;
+    font-size: 1.5em;
+}
+.planets:hover ul{
+    opacity: 0.8;
+}
+.planets h1{
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 9em;
+    text-align: center;
+    position: relative;
+    left: 25%;
+    transition: left 0.5s;
+}
+#planet1 h1{
+    background-image: url("../images/MOON.png");
+    background-position: bottom;
+    background-size: 280px;
+    height: 10em;
+}
+#planet2 h1{
+    background-image: url("../images/pia00271-removebg-preview.png");
+    background-position: center;
+    background-size: 210px;
+    height: 10em;
+}
+#planet3 h1{
+    background-image: url("../images/pia02528_0-removebg-preview.png");
+    background-position: bottom;
+    background-size: 210px;
+    height: 10em;
+}
+#planet4 h1{
+    background-image: url("../images/maxresdefault-removebg-preview\ \(1\).png");
+    background-position: bottom;
+    background-size: 210px;
+    height: 10em;   
+}
+#planet5 h1{
+    background-image: url("../images/thumbnail_big-removebg-preview.png");
+    background-position: bottom;
+    background-size: 210px;
+    height: 10em;
+}
+#planet6 h1{
+    background-image: url("../images/tumblr_pg0zc4BqQE1unbmho_1280-removebg-preview.png");
+    background-position: bottom;
+    background-size: 310px;
+    height: 10em;
+}
+#all{
+    text-decoration: none;
+    color: lightgray;
+    font-size: 2em;
+}
+#all:hover{
+    color: white;
+}
+
+
+
+
+
+
+
+#videoDiv {width: 100%; height: 100%; position: fixed;}
+#videoBlock {width: 100%; height: 100%; display: flex;  justify-content: center; align-items: center;}
+.content {width: 100%; height:100%; position: absolute; top: 0; left: 0;}
+.content *{padding:0.4em; margin:0}
+.calc{
+    margin-top: 18%;
+    padding: 80px 8em;
+    background-image: url("../images/circuit-board-vector-seamless-texture-sci-fi-electronic-background_53562-4044.jpg");
+    background-size: 350px;
+    background-position: center;
+    text-align: center;
+    color: #41FF00;
+    font-family: 'Press Start 2P', cursive;
+    opacity: 0.8;
+}
+
+#goBack{
+    position: fixed;
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+#goBack{
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .calc{
+        margin-top: 45%;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .calc{
+        margin-top: 35%;
+    }
+}
+@media only screen and (min-width: 1100px){
+    .calc{
+        margin-top: 18%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    background-color: var(--borders);
+    font-family: Arial, sans-serif;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#clicked{
+    color: black;
+}
+#clicked:hover{
+    background-color: var(--borders);
+}
+/* styling search bar */
+.search input[type=text]{
+    width:300px;
+    height:25px;
+    border-radius:25px;
+    border: none;
+}
+
+.search{
+    float:right;
+    margin:7px;
+}
+
+.search button{
+    background-color: var(--borders);
+    color: #f2f2f2;
+    float: right;
+    padding: 5px 10px;
+    margin-right: 16px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}

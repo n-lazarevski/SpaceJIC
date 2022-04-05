@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Space-JIC</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="PLANETS">
+    <div class="navbar">
+        <a href="navs/mission.html">Our Mission</a>
+        <a id="clicked" href="index.html">Planets</a>
+        <a href="planets.html">Ships</a>
+        <div class="dropdown">
+            <button class="dropbtn">Learn More
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="navs/exoplanets.html">Exoplanets</a>
+                <a href="navs/propulsion.html">Propulsion systems</a>
+            </div>
+        </div>
+        <a href="navs/About.html">About Us</a>
+        <a href="navs/Contact.html">Contact</a>
+
+    </div>
+    <header>
+        <img src="images/iconfinder_starship_3285300.png" height="512" width="512"/>
+        <h1>Space-JIC</h1>
+        <p>The imminent climate crisis, a more dangerous global pandemic or the ever-present threat of nuclear war are putting our presence on Earth at risk. Humanity will be facing a lot of hard decisions in the near future when it comes to our survival, and one of them might have to be the decision to leave Earth. The search for habitable planets and moons is on-going and there have been multiple possible candidates. NASA and its partner agencies have been working on plans for futuristic spaceships that will move at speeds close to the speed of light.</p>
+        <a id="explore" href="#planet1">Explore</a>
+        <a id="smartSelect" href="#anchor">Smart Select</a>
+    </header>
+    <div id="mid">
+        <section class="planets" id="planet1">
+            <h1>The Moon</h1>
+            <ul>
+                <li>Distance: 384,400km</li>
+                <li>Orbital period: 27 days</li>
+                <li>Radius: 1737 km </li>
+                <li>Mass: 0.012 Earth masses</li>
+                <li>Temperature: 25 K</li>
+               <!-- <li>ESI*:</li>  -->
+            </ul>
+            <a href="planets.html"><button type="submit" class="Pbtn" value="384400">select</button></a>
+        </section>     
+  
+        <section class="planets" id="planet2">
+            <h1>Venus</h1>
+            <ul>
+                <li>Distance: 163.13 million km</li>
+                <li>Orbital period: 225 days</li>
+                <li>Radius: 6052 km ( 0.95 Earth radius)</li>
+                <li>Mass: 0.815 Earth masses</li>
+                <li>Temperature: 737 K</li>
+            </ul>
+            <a href="planets.html"><button type="submit" class="Pbtn" value="163000000">select</button></a>
+        </section>
+  
+        <section class="planets" id="planet3">
+            <h1>Europa</h1>
+            <ul>
+                <li>Distance: 628.3 million km</li>
+                <li>Orbital period: 85 hours</li>
+                <li>Radius: 1560.8 km</li>
+                <li>Mass: 0.0245 Earth masses</li>
+                <li>Temperature: 130 K</li>
+            </ul>
+            <a href="planets.html"><button type="submit" class="Pbtn" value="628000000">select</button></a>
+        </section>
+       
+        <section class="planets" id="planet4">
+            <h1>Teegarden's star b</h1>
+            <ul>
+                <li>Distance: 12 light years</li>
+                <li>Type: Super Earth</li>
+                <li>Star type: m-type Red Dwarf</li>
+                <li>Orbital period: 4,9 days</li>
+                <li>Radius: 1.02 Earth radius</li>
+                <li>Mass: 1.05 Earth masses</li>
+                <li>Temperature: 267 K</li>
+                <li>ESI: 0.93</li>
+            </ul>  
+            <a href="planets.html"><button type="submit" class="Pbtn" value="114000000000000">select</button> </a>
+        </section>
+        
+        <section class="planets" id="planet5">
+            <h1>TRAPPIST 1e</h1>
+            <ul>
+                <li>Distance: 39.5 light years</li>
+                <li>Type: Earth-like planet</li>
+                <li>Star type: ultra-cool red dwarf star </li>
+                <li>Orbital period: 6.1 days</li>
+                <li>Radius: 0.91 Earth radius </li>
+                <li>Mass: 0.77 Earth masses </li>
+                <li>Temperature: 246 K</li>
+                <li>ESI: 0.95</li>
+            </ul>     
+            <a href="planets.html"><button type="submit" class="Pbtn" value="350000000000000">select</button></a>
+        </section> 
+        <section class="planets" id="planet6">
+            <h1>Gliese 436b</h1>
+            <ul>
+                <li>Distance: 31,8 light years</li>
+                <li>Orbital period: 2.6 days</li>
+                <li>Radius: 4,3 Earth radius </li>
+                <li>Mass: 21,4 Earth masses</li>
+                <li>Temperature: 712 K</li>
+                <li>ESI: 0.2</li>
+            </ul>     
+            <a href="planets.html"><button type="submit" class="Pbtn" value="300000000000000">select</button></a>
+
+        </section>
+        <a id="all" href="test.html">See all planets...</a>
+        <span id="anchor"></span>
+        <form id="Q">
+            <h1>Find your perfect home</h1>
+            <div class="qs" id="q1">
+                <input type="radio" id="solar" name="systems" value=1 checked>
+                <label for="solar">Inside our Solar System</label><br>
+                <input type="radio" id="notsolar" name="systems" value=0>
+                <label for="notsolar">Outside our Solar System</label><br><br>
+            </div>
+            <div class="qs" id="q2">
+                <label for="ESI">Minimum ESI(1-100):</label>
+                <input type="number" id="ESI" name="quantity" min="1" max="100">
+                <!--<input type="radio" id="earth" name="ESI" value=1 checked>
+                <label for="earth">High ESI</label><br>
+                <input type="radio" id="notearth" name="ESI" value=0>
+                <label for="notearth">Low ESI</label><br>-->
+            </div>
+            <div class="qs" id="q3">
+                <label for="temperature">Temperature (in Kelvin):</label>
+                <input type="number" id="temperature" name="quantity" min="1" max="1000">
+                <!--<input type="radio" id="hot" name="Temperature" value=1 checked>
+                <label for="hot">High Temperatures</label><br>
+                <input type="radio" id="cold" name="Temperature" value=0>
+                <label for="cold">Low Temperatures</label><br>-->
+            </div>
+
+            <div class="qs" id="q5">
+                <label for="purpose">Purpose: </label>
+                <select id="purpose" name="purposes">
+                    <option value="Settlement">Habitat</option>
+                    <option value="mining">Resource mining</option>
+                    <option value="Fun">Travel</option>
+            </select>
+            </div>
+        </form>
+        <button type="submit" id="booking">SUBMIT</button>
+
+        <span class="BTT"><a href="#PLANETS">Back to Top</a></span>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+        <script type='text/javascript'>
+            var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1M7wEhIOCXefrsc33yH16ygTxO7n6xm3jdIKT7POhr_s/edit?usp=sharing';
+
+            function getInputValue() {
+                // Selecting the input element and get its value
+                var inputVal = document.getElementById("myInput").value;
+                console.log(inputVal);
+            }
+
+            function init() {
+                Tabletop.init( { key: publicSpreadsheetUrl,
+                    callback: showInfo,
+                    simpleSheet: true } )
+            }
+
+            function removeElement(elementId) {
+                // Removes an element from the document
+                var element = document.getElementById(elementId);
+                element.parentNode.removeChild(element);
+            }
+
+
+            function showInfo(data, tabletop) {
+                console.log(data);
+                let sub = document.getElementById("booking");
+                let page = document.getElementById("mid");
+                let clicked = false;
+                sub.onclick = function () {
+                    let found = false;
+                    let purpose = document.getElementById('purpose').value;
+                    if(clicked){
+                        removeElement('DELETE');
+                    }
+
+                    let container = document.createElement('div');
+                    container.className = 'GridBase';
+                    container.id = 'DELETE';
+                    page.appendChild(container);
+                    for(let i=0; i<data.length; i++){
+                        if(purpose === data[i].Purpose){
+                            if(document.getElementById('solar').checked && data[i].solarSystem === 'YES'){
+                                if(parseFloat(data[i].esi)*100 > parseFloat(document.getElementById('ESI').value)){
+                                    if(parseFloat(data[i].temperature) < parseFloat(document.getElementById('temperature').value) + 30 && parseFloat(data[i].temperature) > parseFloat(document.getElementById('temperature').value) -30){
+                                        let section=document.createElement('div');
+                                        section.className = "matches";
+                                        container.appendChild(section);
+
+                                        let info = document.createElement('div');
+                                        info.className = 'info';
+                                        section.appendChild(info);
+
+                                        let choice = document.createElement('h2');
+                                        info.appendChild(choice);
+                                        choice.innerHTML=choice.innerHTML + data[i].name;
+
+                                        let atr = document.createElement('ul');
+                                        info.appendChild(atr);
+                                        let type = document.createElement('li');
+                                        atr.appendChild(type);
+                                        type.innerHTML = type.innerHTML + "Type: " + data[i].type;
+                                        let mass = document.createElement('li');
+                                        atr.appendChild(mass);
+                                        mass.innerHTML = mass.innerHTML + "Mass: " + data[i].mass;
+                                        let esi = document.createElement('li');
+                                        atr.appendChild(esi);
+                                        esi.innerHTML = esi.innerHTML + "ESI: " + data[i].esi;
+                                        let temp = document.createElement('li');
+                                        atr.appendChild(temp);
+                                        temp.innerHTML = temp.innerHTML + "Temperature: " + data[i].temperature + "K";
+
+                                        let final = document.createElement('button');
+                                        final.className = 'choiceBTN';
+                                        section.appendChild(final);
+                                        final.innerHTML = final.innerHTML + "Select";
+                                        final.onclick = function () {
+                                            localStorage.setItem("distStorage", data[i].distance);
+                                            localStorage.setItem("Planet", data[i].name);
+                                            window.location = 'planets.html';
+                                        };
+                                        found = true;
+                                    }
+                                }
+                            }
+                            else if(document.getElementById('notsolar').checked && data[i].solarSystem === 'NO'){
+                                if(parseFloat(data[i].esi)*100 > parseFloat(document.getElementById('ESI').value)){
+                                    if(parseFloat(data[i].temperature) < parseFloat(document.getElementById('temperature').value) + 30 && parseFloat(data[i].temperature) > parseFloat(document.getElementById('temperature').value) -30){
+                                        let section=document.createElement('div');
+                                        section.className = "matches";
+                                        container.appendChild(section);
+
+                                        let info = document.createElement('div');
+                                        info.className = 'info';
+                                        section.appendChild(info);
+
+                                        let choice = document.createElement('h2');
+                                        info.appendChild(choice);
+                                        choice.innerHTML=choice.innerHTML + data[i].name;
+
+                                        let atr = document.createElement('ul');
+                                        info.appendChild(atr);
+                                        let type = document.createElement('li');
+                                        atr.appendChild(type);
+                                        type.innerHTML = type.innerHTML + "Type: " + data[i].type;
+                                        let mass = document.createElement('li');
+                                        atr.appendChild(mass);
+                                        mass.innerHTML = mass.innerHTML + "Mass: " + data[i].mass;
+                                        let esi = document.createElement('li');
+                                        atr.appendChild(esi);
+                                        esi.innerHTML = esi.innerHTML + "ESI: " + data[i].esi;
+                                        let temp = document.createElement('li');
+                                        atr.appendChild(temp);
+                                        temp.innerHTML = temp.innerHTML + "Temperature: " + data[i].temperature + "K";
+
+                                        let final = document.createElement('button');
+                                        final.className = 'choiceBTN';
+                                        section.appendChild(final);
+                                        final.innerHTML = final.innerHTML + "Select";
+                                        final.onclick = function () {
+                                            localStorage.setItem("distStorage", data[i].distance);
+                                            localStorage.setItem("Planet", data[i].name);
+                                            window.location = 'planets.html';
+                                        };
+                                        found = true;
+                                    }
+                                }
+
+                            }
+                            else{
+                                /*let nothing = document.createElement('h2');
+                                container.appendChild(nothing);
+                                nothing.innerHTML = nothing.innerHTML + "No match found";*/
+
+                            }
+
+                        }
+                    }
+                    if(!found){
+                        let nothing = document.createElement('h2');
+                        container.appendChild(nothing);
+                        nothing.innerHTML = nothing.innerHTML + "No match found";
+                    }
+                    clicked = true;
+                }
+                /*let section=document.createElement('div');
+                section.className = "matches";
+                container.appendChild(section);
+
+                let choice = document.createElement('h2');
+                section.appendChild(choice);
+                choice.innerHTML=choice.innerHTML + data[i].name;
+
+                let final = document.createElement('button');
+                final.className = 'choiceBTN';
+                section.appendChild(final);
+                final.innerHTML = final.innerHTML + "Select";
+                final.onclick = function () {
+                    localStorage.setItem("distStorage", data[i].distance);
+                    localStorage.setItem("Planet", data[i].name);
+                    window.location = 'planets.html';
+                };*/
+            }
+
+
+            window.addEventListener('DOMContentLoaded', init)
+        </script>
+        <script src="plan.js"></script>
+    </div>
+</body>
+</html>

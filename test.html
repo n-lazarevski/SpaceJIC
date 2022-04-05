@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link rel="stylesheet" href="style/navStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
+
+<body id="testbody">
+    <header id="testhead">
+        <a href="index.html">Back</a>
+    </header>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    <script type='text/javascript'>
+        var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1M7wEhIOCXefrsc33yH16ygTxO7n6xm3jdIKT7POhr_s/edit?usp=sharing';
+
+        function getInputValue() {
+            // Selecting the input element and get its value
+            var inputVal = document.getElementById("myInput").value;
+            console.log(inputVal);
+        }
+
+        function init() {
+            Tabletop.init( { key: publicSpreadsheetUrl,
+                callback: showInfo,
+                simpleSheet: true } )
+        }
+
+        function showInfo(data, tabletop) {
+            console.log(data);
+            for(let i=0; i<data.length; i++){
+
+                /*txt+= "name: " + data[i].name + " type: " + data[i].type + " temperature: " + data[i].temperature + '<br />'*/
+                var test=document.createElement('section');
+                test.className = "sections";
+                test.setAttribute('id','test');
+                let pl = document.createElement('h1');
+                test.appendChild(pl);
+                pl.innerHTML = pl.innerHTML + data[i].name;
+                let list = document.createElement("ul");
+                list.className = "planets";
+                document.body.appendChild(test);
+                test.appendChild(list);
+                let btn = document.createElement("button");
+                test.appendChild(btn);
+                btn.className = 'press';
+                btn.innerHTML = btn.innerHTML + "Select";
+                btn.onclick = function () {
+                    localStorage.setItem("distStorage", data[i].distance);
+                    localStorage.setItem("Planet", data[i].name);
+                    window.location = 'planets.html';
+                };
+
+
+                var type=document.createElement('li');
+                list.appendChild(type);
+                type.innerHTML=type.innerHTML + "Type: " + data[i].type;
+                var dist=document.createElement('li');
+                list.appendChild(dist);
+                if(data[i].distance > 9461000000000){
+                    dist.innerHTML=dist.innerHTML + "Distance: " + Math.round(data[i].distance/9461000000000) + " light-years";
+                }
+                else{dist.innerHTML=dist.innerHTML + "Distance: " + data[i].distance + "km";}
+                var es=document.createElement('li');
+                list.appendChild(es);
+                es.innerHTML=es.innerHTML + "ESI: " + data[i].esi;
+                var mass=document.createElement('li');
+                list.appendChild(mass);
+                mass.innerHTML=mass.innerHTML + "Mass: " + data[i].mass;
+                var diam=document.createElement('li');
+                list.appendChild(diam);
+                diam.innerHTML=diam.innerHTML + "Diameter: " + data[i].diameter;
+                var temp=document.createElement('li');
+                list.appendChild(temp);
+                temp.innerHTML=temp.innerHTML + "Temperature: " + data[i].temperature;
+                var op=document.createElement('li');
+                list.appendChild(op);
+                op.innerHTML=op.innerHTML + "Orbital Period: " + data[i].orbitalperiod + " days";
+            }
+
+
+
+        }
+
+        window.addEventListener('DOMContentLoaded', init)
+    </script>
+    </body>
+</html>
